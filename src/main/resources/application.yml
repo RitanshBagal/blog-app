@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: blog-app
+
+# db configurations
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog_app
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# JWT related configurations
+security:
+  jwt:
+    secret: lkjafdslkjqwsxdcvgtyujmkfadlfofwwoinca,amfkljlfakfalfajiakdsmc26aldfmlaflaj47
+    access-token-expire-time: 600000
+    refresh-token-expire-time: 3600000
+    issuer: blog-app
